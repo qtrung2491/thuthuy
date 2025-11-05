@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <title>love </title>
+    <meta name="description" content="A Love Cipher is an emotional 3D experience. Discover a sparkling heart built from your own photos, memories, and loving messages, floating in a cosmic universe of stars. A unique digital gift encoded with love.">
+    <meta name="csrf-token" content="HFutP7dY1FU1qhjV0G01vWbhyHLXzJVenHSq0xxD">
+    <meta name="keywords" content="love ">
+    <link rel="canonical" href="https://love.tsonit.com/6wfk3etzhja">
+    <meta property="og:title" content="love ">
+    <meta property="og:description" content="A Love Cipher is an emotional 3D experience. Discover a sparkling heart built from your own photos, memories, and loving messages, floating in a cosmic universe of stars. A unique digital gift encoded with love.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://love.tsonit.com/6wfk3etzhja">
+    <meta property="og:image" content="https://love.tsonit.com/assets/memory-heart/image.png">
+    <meta property="og:image:height" content="575">
+    <meta property="og:image:width" content="288">
+    <meta name="twitter:title" content="love ">
+    <meta name="twitter:description" content="A Love Cipher is an emotional 3D experience. Discover a sparkling heart built from your own photos, memories, and loving messages, floating in a cosmic universe of stars. A unique digital gift encoded with love.">
+    <meta name="twitter:image" content="https://love.tsonit.com/assets/memory-heart/image.png">
+    <meta name="twitter:site" content="@loveloom">
+    <meta property="og:url" content="https://love.tsonit.com/6wfk3etzhja">
+    <link rel="canonical" href="https://love.tsonit.com/6wfk3etzhja">
+    <meta property="og:image:alt" content="Trang bìa của LoveLoom" />
+    <meta name="twitter:image:alt" content="Trang bìa của LoveLoom" />
+    <meta property="og:site_name" content="LoveLoom" />
+    <meta name="twitter:creator" content="@qtrung" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="author" content="   quỷ cái">
+    <meta name="copyright" content="© 2025 LoveLoom">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="icon" type="image/png" href="https://love.tsonit.com/ico_logo.png" sizes="16x16">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?
+  family=Noto+Sans:wght@300;400;500;700&
+  family=Noto+Sans+JP:wght@300;400;500;700&
+  family=Noto+Sans+KR:wght@300;400;500;700&
+  family=Noto+Sans+SC:wght@300;400;500;700&
+  family=Noto+Sans+TC:wght@300;400;500;700&
+  family=Noto+Sans+Arabic:wght@300;400;500;700&
+  family=Noto+Sans+Devanagari:wght@300;400;500;700&
+  family=Noto+Sans+Hebrew:wght@300;400;500;700&
+  family=Noto+Sans+Thai:wght@300;400;500;700&
+  display=swap"
+        rel="stylesheet">
+
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C01QH0Y269"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.module.js",
+        "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.157.0/examples/jsm/"
+      }
+    }
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-C01QH0Y269');
+    </script>
+    <style>
+        .text-white {
+            color: white !important;
+        }
+
+        .btn-audio-toggle,
+        .btn-fullscreen-toggle,
+        .btn-facebook-link {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        
+        #facebook-link {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        #facebook-link:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+
+        .music-status {
+            display: flex;
+            position: fixed;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            z-index: 9999;
+            align-items: center;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        .music-status .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #a259f7;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        body.portrait-mode #landscape-warning {
+            display: flex;
+            opacity: 1;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ---- MÀN HÌNH CẢNH BÁO XOAY NGANG ---- */
+        #landscape-warning {
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Nền vũ trụ sâu thẳm, màu xanh tím */
+            background: radial-gradient(ellipse at center, #1c1a3a 0%, #0c0a1f 100%);
+            color: #e0eaff;
+            /* Màu chữ chung */
+            display: none;
+            /* Ẩn ban đầu, JS sẽ điều khiển */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Kích hoạt hiển thị cảnh báo */
+        body.portrait #landscape-warning {
+            display: flex;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Nội dung cảnh báo - Nâng cấp lớn ở đây! */
+        #landscape-warning .warning-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem 2.5rem;
+            border-radius: 20px;
+            /* Nền thủy tinh mờ, có chiều sâu */
+            background: rgba(28, 26, 58, 0.6);
+            backdrop-filter: blur(10px);
+            /* Hiệu ứng kính mờ */
+            /* Đường viền phát sáng mềm mại */
+            border: 1.5px solid rgba(173, 216, 230, 0.3);
+            /* Lightblue mờ */
+            /* Đổ bóng đa lớp để tạo hiệu ứng "hào quang" */
+            box-shadow:
+                0 0 40px rgba(78, 88, 216, 0.5),
+                /* Bóng tím xanh lan tỏa */
+                0 0 15px rgba(255, 255, 255, 0.1),
+                /* Bóng trắng nhẹ bên trong */
+                inset 0 0 8px rgba(173, 216, 230, 0.2);
+            /* Viền sáng bên trong */
+            transform: scale(0.95);
+            opacity: 0;
+            animation: fadeInContent 0.6s 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        }
+
+        @keyframes fadeInContent {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        #landscape-warning h1 {
+            font-family: 'Orbitron', 'Montserrat', sans-serif;
+            /* Giữ font Orbitron */
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            /* Thêm hiệu ứng text-shadow phát sáng */
+            text-shadow: 0 0 12px rgba(230, 230, 255, 0.8), 0 0 4px rgba(255, 255, 255, 1);
+        }
+
+        #landscape-warning h1:nth-of-type(2) {
+            font-size: 1.5rem;
+            /* Giảm kích thước "Tinh Cầu" */
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        #landscape-warning p {
+            font-size: 1.1rem;
+            color: #c0c8ff;
+            /* Màu chữ dịu hơn */
+            line-height: 1.5;
+            text-shadow: 0 0 6px rgba(192, 200, 255, 0.7);
+        }
+
+        #landscape-warning p:last-of-type {
+            margin-top: 1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Nền sao động */
+        #landscape-warning .stars-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            pointer-events: none;
+            background: transparent;
+            overflow: hidden;
+            /* Đảm bảo sao không tràn ra ngoài */
+        }
+
+        #landscape-warning .stars-bg::before,
+        #landscape-warning .stars-bg::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            /* Các hạt sao nhỏ, mịn hơn */
+            background-image:
+                radial-gradient(circle, #fff 1px, transparent 1px),
+                radial-gradient(circle, #c0c8ff 1px, transparent 1px),
+                radial-gradient(circle, #fff 0.5px, transparent 0.5px);
+            background-size: 100px 100px, 150px 150px, 60px 60px;
+            background-position: 0 0, 50px 50px, 30px 30px;
+            opacity: 0;
+            animation: stars-move 30s linear infinite, fadeInStars 1s ease-out forwards;
+        }
+
+        #landscape-warning .stars-bg::after {
+            background-size: 150px 150px, 80px 80px, 120px 120px;
+            background-position: 75px 75px, 40px 40px, 10px 10px;
+            animation-duration: 45s;
+        }
+
+        @keyframes fadeInStars {
+            to {
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes stars-move {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-50%);
+            }
+
+            /* Chuyển động theo chiều dọc */
+        }
+    </style>
+</head>
+
+<body style="overflow: hidden; position: fixed; width: 100%; height: 100%;">
+
+    <button id="toggle-audio" class="text-white btn-audio-toggle"
+        style="position: absolute; top: 15px; right: 150px; z-index: 999;">
+        <i id="audio-icon" class="text-white  fa-solid fa-volume-high"></i>
+    </button>
+    <!--
+<a href="https://www.facebook.com/share/1A4NrMha2A/" target="_blank" id="facebook-link" class="text-white btn-facebook-link"
+    style="position: absolute; top: 15px; right: 15px; z-index: 999;">
+    Kết nối với tớ nhé
+</a>
+-->
+
+    <button id="toggle-fullscreen" class="text-white btn-fullscreen-toggle"
+        style="position: absolute; top: 15px; left: 15px; z-index: 999;">
+        <i id="fullscreen-icon" class="text-white fa-solid fa-expand"></i>
+    </button>
+            
+        <script>
+            window.dataMemoryHeartLoveLoom = {"template":"birthday-v2","data":{"title":"love ","type_music":"zing","music_id":"Z7UZ7089","backgroundMusic":"","messages":["Thu Thủy","L-O-V-E", ],"images":["./1.jpg","./2.jpg"],"heartColor":"#FF69B4"}};
+        </script>
+      <script type="module" src="./main.js"></script>
+    <script>
+        // Thay thế toàn bộ đối tượng musicManager cũ bằng cái này
+        const musicManager = {
+            // Properties
+            audio: null,
+            isUnlocked: false, // Trạng thái đã được người dùng "mở khóa"
+            isAttemptingPlay: false, // Cờ để tránh gọi play() nhiều lần cùng lúc
+            state: 'idle', // idle, loading, ready, playing, paused, error
+            tokenData: null,
+            _unlockEvents: ['touchstart', 'click', 'keydown', 'mousemove'], // Các sự kiện để mở khóa
+            _unlockHandlerRef: null, // Tham chiếu đến handler để có thể gỡ bỏ
+
+            // ===== BẮT ĐẦU NÂNG CẤP BYPASS AUTOPLAY =====
+
+            /**
+             * Bắt đầu quá trình lắng nghe tương tác của người dùng để cố gắng phát nhạc.
+             * Đây là cơ chế cốt lõi để vượt qua chính sách Autoplay của trình duyệt.
+             */
+            _startAutoplayBypass() {
+                if (this.isUnlocked || !this.audio) return; // Nếu đã mở khóa hoặc chưa có audio thì không cần
+
+                // Tạo một hàm handler duy nhất để có thể gỡ bỏ sau này
+                // .bind(this) đảm bảo `this` bên trong handler luôn là musicManager
+                this._unlockHandlerRef = this._unlockHandler.bind(this);
+
+                // Gắn handler vào tất cả các sự kiện có khả năng mở khóa audio
+                this._unlockEvents.forEach(eventName => {
+                    document.addEventListener(eventName, this._unlockHandlerRef, {
+                        passive: true
+                    });
+                });
+
+                console.log("Bypass Autoplay: Đang lắng nghe tương tác người dùng để mở khóa âm thanh...");
+            },
+
+            /**
+             * Hàm xử lý sự kiện tương tác. Sẽ chỉ chạy MỘT LẦN thành công.
+             */
+            _unlockHandler() {
+                // Nếu đã mở khóa hoặc đang thử phát rồi thì bỏ qua
+                if (this.isUnlocked || this.isAttemptingPlay) return;
+
+                this.isAttemptingPlay = true;
+
+                // Cố gắng phát nhạc (có thể sẽ bị trình duyệt chặn nếu chỉ là mousemove)
+                this.audio.play().then(() => {
+                    // THÀNH CÔNG!
+                    console.log("Bypass Autoplay: Âm thanh đã được mở khóa thành công!");
+                    this.isUnlocked = true;
+                    // Gỡ bỏ tất cả các trình lắng nghe sự kiện để tối ưu hiệu năng
+                    this._unlockEvents.forEach(eventName => {
+                        document.removeEventListener(eventName, this._unlockHandlerRef);
+                    });
+                }).catch(error => {
+                    // Thất bại (ví dụ: NotAllowedError), không sao cả, sẽ thử lại ở tương tác tiếp theo.
+                    // Không cần làm gì ở đây, chỉ cần đảm bảo isAttemptingPlay được reset.
+                }).finally(() => {
+                    this.isAttemptingPlay = false;
+                });
+            },
+
+            // ===== KẾT THÚC NÂNG CẤP BYPASS AUTOPLAY =====
+
+
+            _setupAudio(sourceUrl = null) {
+                let audioSrc = sourceUrl || window.dataMemoryHeartLoveLoom?.data?.backgroundMusic;
+                if (!audioSrc) {
+                    audioSrc = './cdd.mp3';
+                    console.warn("Không tìm thấy cấu hình nhạc, sử dụng nhạc mặc định.");
+                }
+                this.audio = new Audio(audioSrc);
+                const isCrossOrigin = /^(https?:)?\/\//.test(audioSrc) && new URL(audioSrc).origin !== window.location
+                    .origin;
+                if (isCrossOrigin) {
+                    this.audio.crossOrigin = "anonymous";
+                }
+                this.audio.loop = true;
+                this.audio.volume = 0.7;
+                this.attachEventListeners();
+                this.updateState('ready');
+            },
+
+            async init() {
+                const musicConfig = window.dataMemoryHeartLoveLoom?.data;
+                this.updateState('loading');
+
+                if (!musicConfig) {
+                    console.warn("Không tìm thấy dataMemoryHeartLoveLoom. Sử dụng nhạc hệ thống dự phòng.");
+                    this._setupAudio();
+                } else if (musicConfig.type_music === 'system' || musicConfig.type_music === 'link') {
+                    this._setupAudio(musicConfig.backgroundMusic);
+                } else if (musicConfig.type_music === 'zing' && musicConfig.music_id) {
+                    try {
+                        const res = await this.fetchWithAuth(`/get-song?id=${musicConfig.music_id}`);
+                        if (!res.ok) throw new Error(`Response not OK: ${res.status}`);
+                        const songInfo = await res.json();
+                        const mp3Url = songInfo.stream?.['128'];
+
+                        if (mp3Url) {
+                            this._setupAudio(mp3Url);
+                        } else {
+                            console.error('Không tìm thấy link MP3 128kbps, dùng nhạc dự phòng.');
+                            this._setupAudio();
+                        }
+                    } catch (error) {
+                        console.error('Lỗi khi lấy nhạc từ Zing:', error);
+                        this.updateState('error');
+                        this._setupAudio();
+                    }
+                } else {
+                    this._setupAudio();
+                }
+
+                // Sau khi audio đã được thiết lập, bắt đầu quá trình bypass
+                this._startAutoplayBypass();
+            },
+
+            play() {
+                if (!this.audio || this.state === 'loading') {
+                    return Promise.reject(new Error("Audio chưa sẵn sàng."));
+                }
+                if (!this.audio.paused) {
+                    return Promise.resolve();
+                }
+                const playPromise = this.audio.play();
+                playPromise.then(() => {
+                    this.isUnlocked = true;
+                    this.updateState('playing');
+                }).catch(error => {
+                    if (error.name === 'NotAllowedError') {
+                        this.updateState('paused');
+                    } else {
+                        this.updateState('error');
+                    }
+                });
+                return playPromise;
+            },
+
+            /**
+             * Hàm toggle "thông minh", được gọi khi người dùng nhấn nút loa
+             */
+            togglePlayback() {
+                if (!this.audio || this.state === 'loading') {
+                    console.warn("Nhạc chưa sẵn sàng.");
+                    return;
+                }
+
+                // Khi người dùng chủ động nhấn nút, ta có thể coi là đã "mở khóa"
+                if (!this.isUnlocked) {
+                    this.isUnlocked = true;
+                }
+
+                if (this.audio.paused) {
+                    this.play();
+                } else {
+                    this.audio.pause();
+                }
+            },
+
+            // Các hàm còn lại giữ nguyên
+            updateState(newState) {
+                this.state = newState;
+                this.updateUI();
+            },
+
+            updateUI() {
+                const audioIcon = document.getElementById('audio-icon');
+                if (!audioIcon) return;
+                if (!this.audio || this.audio.paused) {
+                    audioIcon.classList.remove("fa-volume-high");
+                    audioIcon.classList.add("fa-volume-xmark");
+                } else {
+                    audioIcon.classList.remove("fa-volume-xmark");
+                    audioIcon.classList.add("fa-volume-high");
+                }
+            },
+
+            attachEventListeners() {
+                if (!this.audio) return;
+                this.audio.onplay = () => this.updateState('playing');
+                this.audio.onpause = () => this.updateState('paused');
+                this.audio.onvolumechange = () => this.updateUI();
+            },
+
+            // Các hàm fetchWithAuth và getToken giữ nguyên
+            async getToken() {
+                try {
+                    const res = await fetch('/token-api-mp3');
+                    if (!res.ok) throw new Error('Không lấy được token');
+                    this.tokenData = await res.json();
+                    return this.tokenData;
+                } catch (err) {
+                    console.error('Lỗi lấy token:', err);
+                    return null;
+                }
+            },
+
+            async fetchWithAuth(url) {
+                if (!this.tokenData) {
+                    await this.getToken();
+                }
+                if (!this.tokenData) throw new Error('Không có token xác thực');
+
+                const headers = {
+                    'X-Auth-Token': this.tokenData.token,
+                    'X-Auth-Timestamp': this.tokenData.timestamp,
+                    'X-Client-Key': this.tokenData.clientKey,
+                    'X-Auth-Nonce': this.tokenData.nonce,
+                };
+
+                let res = await fetch(url, {
+                    headers
+                });
+
+                if (res.status === 401 || res.status === 403) { // Token hết hạn
+                    console.log("Token có thể đã hết hạn, làm mới token...");
+                    await this.getToken();
+                    if (!this.tokenData) throw new Error('Không lấy được token mới');
+
+                    const newHeaders = {
+                        'X-Auth-Token': this.tokenData.token,
+                        'X-Auth-Timestamp': this.tokenData.timestamp,
+                        'X-Client-Key': this.tokenData.clientKey,
+                        'X-Auth-Nonce': this.tokenData.nonce,
+                    };
+                    res = await fetch(url, {
+                        headers: newHeaders
+                    });
+                }
+
+                if (!res.ok) {
+                    const errorText = await res.text();
+                    throw new Error(`Request lỗi sau khi thử lại: ${res.status} - ${errorText}`);
+                }
+                return res;
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Gán vào window để có thể debug từ console nếu cần
+            window.musicManager = musicManager;
+            // Khởi tạo trình quản lý nhạc
+            musicManager.init();
+
+            // Gắn sự kiện cho nút loa
+            const toggleBtn = document.getElementById("toggle-audio");
+            if (toggleBtn) {
+                toggleBtn.addEventListener("click", () => musicManager.togglePlayback());
+            }
+            const fullscreenManager = {
+                toggleBtn: document.getElementById('toggle-fullscreen'),
+                iconElement: document.getElementById('fullscreen-icon'),
+                isFullscreen: function() {
+                    return !!(document.fullscreenElement || document.webkitFullscreenElement || document
+                        .mozFullScreenElement || document.msFullscreenElement);
+                },
+                updateIcon: function() {
+                    if (!this.iconElement) return;
+
+                    if (this.isFullscreen()) {
+                        this.iconElement.classList.remove('fa-expand');
+                        this.iconElement.classList.add('fa-compress');
+                    } else {
+                        this.iconElement.classList.remove('fa-compress');
+                        this.iconElement.classList.add('fa-expand');
+                    }
+                },
+                toggle: function() {
+                    if (!this.isFullscreen()) {
+                        const element = document.documentElement;
+                        if (element.requestFullscreen) {
+                            element.requestFullscreen();
+                        } else if (element.mozRequestFullScreen) { // Firefox
+                            element.mozRequestFullScreen();
+                        } else if (element.webkitRequestFullscreen) { // Chrome, Safari, Opera
+                            element.webkitRequestFullscreen();
+                        } else if (element.msRequestFullscreen) { // IE/Edge
+                            element.msRequestFullscreen();
+                        }
+                    } else {
+                        if (document.exitFullscreen) {
+                            document.exitFullscreen();
+                        } else if (document.mozCancelFullScreen) {
+                            document.mozCancelFullScreen();
+                        } else if (document.webkitExitFullscreen) {
+                            document.webkitExitFullscreen();
+                        } else if (document.msExitFullscreen) {
+                            document.msExitFullscreen();
+                        }
+                    }
+                },
+                init: function() {
+                    if (this.toggleBtn) {
+                        this.toggleBtn.addEventListener('click', () => this.toggle());
+                        document.addEventListener('fullscreenchange', () => this.updateIcon());
+                        document.addEventListener('webkitfullscreenchange', () => this.updateIcon());
+                        document.addEventListener('mozfullscreenchange', () => this.updateIcon());
+                        document.addEventListener('MSFullscreenChange', () => this.updateIcon());
+                    }
+                }
+            };
+            fullscreenManager.init();
+        });
+    </script>
+    
+</body>
+
+
+</html>
